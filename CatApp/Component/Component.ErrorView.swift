@@ -3,7 +3,7 @@ import SwiftUI
 extension Component {
     struct ErrorView: View {
         let errorMsg: String
-        let onErrorRetry: (() -> Void)?
+        let retry: (() -> Void)?
 
         var body: some View {
             VStack(alignment: .center, spacing: .s2) {
@@ -15,9 +15,9 @@ extension Component {
                         .foregroundStyle(.red)
                 }
 
-                if let onErrorRetry {
+                if let retry {
                     Button {
-                        onErrorRetry()
+                        retry()
                     } label: {
                         HStack(alignment: .center, spacing: .s4) {
                             Image(systemName: .arrowCounterClockwise)

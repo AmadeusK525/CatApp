@@ -64,6 +64,6 @@ extension DataView where LoadingView == ProgressView<EmptyView, EmptyView>, Erro
         self.dataState = dataState
         self.success = success
         self.loading = { ProgressView() }
-        self.error = { errorMsg in Component.ErrorView(errorMsg: errorMsg, onErrorRetry: onErrorRetry) }
+        self.error = { errorMsg in Component.ErrorView(errorMsg: errorMsg, retry: onErrorRetry) }
     }
 }
