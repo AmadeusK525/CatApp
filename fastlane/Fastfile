@@ -1,0 +1,13 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Test application"
+  lane :test do
+    scan(
+      project: "CatApp.xcodeproj",
+      devices: ["iPhone 12"],
+      scheme: "CatApp",
+      clean: false,
+    )
+  end
+end
