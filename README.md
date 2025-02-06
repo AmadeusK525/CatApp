@@ -1,7 +1,10 @@
 ## CatApp
 
-Sample iOS application code to showcase the MVVM pattern. This uses the public
+Sample iOS application code to showcase the MVVM pattern in SwiftUI. This uses the public
 [Cat API](https://thecatapi.com) for getting relevant data.
+
+There are two pages: a `List` page and a `Details` page. Pagination, loading and error states are
+easily handled with helper functions.
 
 ### Minimum deployment target
 
